@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ed42885f-c125-4b8e-9efa-fc459dcc010a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:3123/DDona.Siscarpio.Wcf.Usuario.Usuario.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DDona.xsd" MetadataType="Schema" ID="82c5e7f1-4648-40d1-bb68-438b5e39b7f3" SourceId="1" SourceUrl="http://pc-sala:3123/DDona.Siscarpio.Wcf.Usuario.Usuario.svc?xsd=xsd0" />
+    <MetadataFile FileName="DDona1.xsd" MetadataType="Schema" ID="9234cc8b-4a3f-48ee-8afa-6d4550cf577e" SourceId="1" SourceUrl="http://pc-sala:3123/DDona.Siscarpio.Wcf.Usuario.Usuario.svc?xsd=xsd1" />
+    <MetadataFile FileName="Usuario.wsdl" MetadataType="Wsdl" ID="57a5424b-4e88-4eca-a81b-051549aa397c" SourceId="1" SourceUrl="http://pc-sala:3123/DDona.Siscarpio.Wcf.Usuario.Usuario.svc?wsdl" />
+    <MetadataFile FileName="DDona.disco" MetadataType="Disco" ID="4bd026c2-fd4e-414b-a4bb-729f8afc21ca" SourceId="1" SourceUrl="http://pc-sala:3123/DDona.Siscarpio.Wcf.Usuario.Usuario.svc?disco" />
+    <MetadataFile FileName="DDona2.xsd" MetadataType="Schema" ID="683d7030-01ad-4377-b2e8-ef59cca58a73" SourceId="1" SourceUrl="http://pc-sala:3123/DDona.Siscarpio.Wcf.Usuario.Usuario.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

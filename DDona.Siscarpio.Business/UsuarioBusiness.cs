@@ -36,6 +36,42 @@ namespace DDona.Siscarpio.Business
             }
         }
 
+        public List<UsuarioListagemDTO> GetUsuarios(string Nome, string Username)
+        {
+            try
+            {
+                using (SiscarpioContext db = new SiscarpioContext())
+                {
+                    IQueryable<Usuario> Usuarios = db.Usuarios.AsQueryable();
+
+                    if (!string.IsNullOrEmpty(Nome))
+                    {
+                        Usuarios = Usuarios.Where(x => x.Nome.Contains(Nome));
+                    }
+
+                    if (!string.IsNullOrEmpty(Username))
+                    {
+                        Usuarios = Usuarios.Where(x => x.Username.Contains(Username));
+                    }
+
+                    List<UsuarioListagemDTO> UsuariosDTO = Usuarios
+                        .Select(x => new UsuarioListagemDTO()
+                        {
+                            Id = x.Id,
+                            Nome = x.Nome,
+                            Username = x.Username
+                        }).ToList();
+
+                    return UsuariosDTO;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public bool LogUser(string Username, string Password)
         {
             try

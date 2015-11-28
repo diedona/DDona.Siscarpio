@@ -1,0 +1,69 @@
+﻿@model DDona.Siscarpio.Web.ViewModel.Usuario.UsuarioIndexViewModel
+
+@{
+    ViewBag.Title = "Listagem de Usuários";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<hr />
+
+@using (Html.BeginForm("Index", "Usuario", FormMethod.Post, new { @class = "form" }))
+{ 
+    <div class="row">
+        <div class="col-xs-2">
+            <div class="form-group">
+                <label for="Nome">Código</label>
+                <input type="text" class="form-control" name="DadosBusca.Id" id="DadosBusca_Id" />
+            </div>
+        </div>
+
+        <div class="col-xs-4">
+            <div class="form-group">
+                <label for="Nome">Nome</label>
+                @*<input id="DadosBusca_Nome" name="DadosBusca.Nome" type="text" class="form-control">*@
+                @*<input id="DadosBusca_Nome" name="DadosBusca.Nome" type="text" value="a">*@
+                @*@Html.TextBoxFor(x => x.DadosBusca.Nome)*@
+                <input id="DadosBusca_Nome" name="DadosBusca.Nome" type="text" value="@Model.DadosBusca.Nome" class="form-control">
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <div class="form-group">
+                <label for="Nome">Username</label>
+                <input type="text" class="form-control" name="DadosBusca.Username" id="DadosBusca_Username" value="@Model.DadosBusca.Username" />
+            </div>
+        </div>
+        <div class="col-xs-2">
+            <div class="form-group">
+                <label>&nbsp;</label>
+                <button type="submit" class="form-control btn btn-success">Buscar</button>
+            </div>
+        </div>
+    </div>
+}
+
+<table class="table table-hover">
+    <tr>
+        <th>
+            Nome
+        </th>
+        <th>
+            Username
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.Usuarios)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td></td>
+        </tr>
+    }
+
+</table>
