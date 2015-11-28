@@ -57,22 +57,25 @@
     <None Include="Service References\UsuarioReference\DDona.Siscarpio.ConsoleTeste.UsuarioReference.UsuarioListagemDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\UsuarioReference\DDona.Siscarpio.Dto.Usuario.xsd">
+    <None Include="Service References\UsuarioReference\DDona.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UsuarioReference\service.wsdl" />
-    <None Include="Service References\UsuarioReference\service.xsd">
+    <None Include="Service References\UsuarioReference\DDona1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UsuarioReference\service1.xsd">
+    <None Include="Service References\UsuarioReference\DDona2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\UsuarioReference\Usuario.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\UsuarioReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UsuarioReference\DDona.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\UsuarioReference\configuration91.svcinfo" />

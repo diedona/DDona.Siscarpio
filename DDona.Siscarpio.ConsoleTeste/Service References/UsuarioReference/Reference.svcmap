@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2c2b58b6-8e5c-4b5b-b2fc-3973ad90b7f9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ed7315d7-7e63-4572-834f-7ebca6eaf9f3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,13 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/DDona.Siscarpio.Wcf.Usuario/Usuario/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="http://localhost:3123/DDona.Siscarpio.Wcf.Usuario.Usuario.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="414acac4-790e-4022-8020-5cfbe382f1fb" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/DDona.Siscarpio.Wcf.Usuario/Usuario/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="522918db-1a58-436d-968d-014f384bd4bb" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/DDona.Siscarpio.Wcf.Usuario/Usuario/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="3a22acc7-a52e-4bd7-b5d0-1e93ebccf2c9" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/DDona.Siscarpio.Wcf.Usuario/Usuario/mex" />
-    <MetadataFile FileName="DDona.Siscarpio.Dto.Usuario.xsd" MetadataType="Schema" ID="3fc804d3-1719-4460-b632-84d9804dec7c" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/DDona.Siscarpio.Wcf.Usuario/Usuario/mex" />
+    <MetadataFile FileName="DDona.xsd" MetadataType="Schema" ID="58b90690-c8b5-48d4-af20-46119f3efb1b" SourceId="1" SourceUrl="http://pc-sala:3123/DDona.Siscarpio.Wcf.Usuario.Usuario.svc?xsd=xsd0" />
+    <MetadataFile FileName="DDona1.xsd" MetadataType="Schema" ID="4b0e208c-32c2-44bb-a559-7f71a548a1ad" SourceId="1" SourceUrl="http://pc-sala:3123/DDona.Siscarpio.Wcf.Usuario.Usuario.svc?xsd=xsd1" />
+    <MetadataFile FileName="Usuario.wsdl" MetadataType="Wsdl" ID="499fce09-58d7-4fba-8f43-5c641456f044" SourceId="1" SourceUrl="http://pc-sala:3123/DDona.Siscarpio.Wcf.Usuario.Usuario.svc?wsdl" />
+    <MetadataFile FileName="DDona.disco" MetadataType="Disco" ID="67c211b4-50ae-4800-9003-afa277b96971" SourceId="1" SourceUrl="http://pc-sala:3123/DDona.Siscarpio.Wcf.Usuario.Usuario.svc?disco" />
+    <MetadataFile FileName="DDona2.xsd" MetadataType="Schema" ID="34cf9bed-4c9f-46a0-93e9-8488b41aab23" SourceId="1" SourceUrl="http://pc-sala:3123/DDona.Siscarpio.Wcf.Usuario.Usuario.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
