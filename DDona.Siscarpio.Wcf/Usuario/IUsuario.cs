@@ -16,6 +16,9 @@ namespace DDona.Siscarpio.Wcf.Usuario
         List<UsuarioListagemDTO> GetAllUsuarios();
 
         [OperationContract]
+        List<UsuarioListagemDTO> GetUsuarios(string Nome, string Username);
+
+        [OperationContract]
         bool LogUser(string Username, string Password);
     }
 }

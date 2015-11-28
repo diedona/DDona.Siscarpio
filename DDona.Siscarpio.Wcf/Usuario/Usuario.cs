@@ -18,6 +18,13 @@ namespace DDona.Siscarpio.Wcf.Usuario
             return UsuarioBusiness.GetAllUsuarios();
         }
 
+        [OperationContract]
+        public List<UsuarioListagemDTO> GetUsuarios(string Nome, string Username)
+        {
+            UsuarioBusiness UsuarioBusiness = new UsuarioBusiness();
+            return UsuarioBusiness.GetUsuarios(Nome, Username);
+        }
+
         public bool LogUser(string Username, string Password)
         {
             UsuarioBusiness UsuarioBusiness = new UsuarioBusiness();
