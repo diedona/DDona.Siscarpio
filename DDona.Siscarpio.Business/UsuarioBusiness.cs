@@ -35,5 +35,33 @@ namespace DDona.Siscarpio.Business
                 throw;
             }
         }
+
+        public bool LogUser(string Username, string Password)
+        {
+            try
+            {
+                using(SiscarpioContext db = new SiscarpioContext())
+                {
+                    Usuario Usuario = db.Usuarios
+                        .Where(x => x.Username.Equals(Username))
+                        .Where(x => x.Password.Equals(Password))
+                        .FirstOrDefault();
+
+                    if(Usuario == null)
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

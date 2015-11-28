@@ -13,16 +13,35 @@
   <wsdl:message name="IUsuario_GetAllUsuarios_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllUsuariosResponse" />
   </wsdl:message>
+  <wsdl:message name="IUsuario_LogUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogUser" />
+  </wsdl:message>
+  <wsdl:message name="IUsuario_LogUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogUserResponse" />
+  </wsdl:message>
   <wsdl:portType name="IUsuario">
     <wsdl:operation name="GetAllUsuarios">
       <wsdl:input wsaw:Action="http://tempuri.org/IUsuario/GetAllUsuarios" message="tns:IUsuario_GetAllUsuarios_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IUsuario/GetAllUsuariosResponse" message="tns:IUsuario_GetAllUsuarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuario/LogUser" message="tns:IUsuario_LogUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuario/LogUserResponse" message="tns:IUsuario_LogUser_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IUsuario" type="tns:IUsuario">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetAllUsuarios">
       <soap:operation soapAction="http://tempuri.org/IUsuario/GetAllUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogUser">
+      <soap:operation soapAction="http://tempuri.org/IUsuario/LogUser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

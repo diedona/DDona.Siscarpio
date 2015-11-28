@@ -99,6 +99,12 @@ namespace DDona.Siscarpio.ConsoleTeste.UsuarioReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuario/GetAllUsuarios", ReplyAction="http://tempuri.org/IUsuario/GetAllUsuariosResponse")]
         System.Threading.Tasks.Task<DDona.Siscarpio.ConsoleTeste.UsuarioReference.UsuarioListagemDTO[]> GetAllUsuariosAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuario/LogUser", ReplyAction="http://tempuri.org/IUsuario/LogUserResponse")]
+        bool LogUser(string Username, string Password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuario/LogUser", ReplyAction="http://tempuri.org/IUsuario/LogUserResponse")]
+        System.Threading.Tasks.Task<bool> LogUserAsync(string Username, string Password);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -134,6 +140,14 @@ namespace DDona.Siscarpio.ConsoleTeste.UsuarioReference {
         
         public System.Threading.Tasks.Task<DDona.Siscarpio.ConsoleTeste.UsuarioReference.UsuarioListagemDTO[]> GetAllUsuariosAsync() {
             return base.Channel.GetAllUsuariosAsync();
+        }
+        
+        public bool LogUser(string Username, string Password) {
+            return base.Channel.LogUser(Username, Password);
+        }
+        
+        public System.Threading.Tasks.Task<bool> LogUserAsync(string Username, string Password) {
+            return base.Channel.LogUserAsync(Username, Password);
         }
     }
 }
