@@ -125,6 +125,7 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\Usuario\BuscaUsuarioViewModel.cs" />
+    <Compile Include="ViewModel\Usuario\CriarEditarUsuarioViewModel.cs" />
     <Compile Include="ViewModel\Usuario\UsuarioIndexViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -182,6 +183,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\UsuarioReference\Usuario.wsdl" />
+    <Content Include="Views\Usuario\Criar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

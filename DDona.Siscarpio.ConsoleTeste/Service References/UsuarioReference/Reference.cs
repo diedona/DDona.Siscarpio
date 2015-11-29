@@ -100,6 +100,12 @@ namespace DDona.Siscarpio.ConsoleTeste.UsuarioReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuario/GetAllUsuarios", ReplyAction="http://tempuri.org/IUsuario/GetAllUsuariosResponse")]
         System.Threading.Tasks.Task<DDona.Siscarpio.ConsoleTeste.UsuarioReference.UsuarioListagemDTO[]> GetAllUsuariosAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuario/GetUsuarios", ReplyAction="http://tempuri.org/IUsuario/GetUsuariosResponse")]
+        DDona.Siscarpio.ConsoleTeste.UsuarioReference.UsuarioListagemDTO[] GetUsuarios(string Nome, string Username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuario/GetUsuarios", ReplyAction="http://tempuri.org/IUsuario/GetUsuariosResponse")]
+        System.Threading.Tasks.Task<DDona.Siscarpio.ConsoleTeste.UsuarioReference.UsuarioListagemDTO[]> GetUsuariosAsync(string Nome, string Username);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuario/LogUser", ReplyAction="http://tempuri.org/IUsuario/LogUserResponse")]
         bool LogUser(string Username, string Password);
         
@@ -140,6 +146,14 @@ namespace DDona.Siscarpio.ConsoleTeste.UsuarioReference {
         
         public System.Threading.Tasks.Task<DDona.Siscarpio.ConsoleTeste.UsuarioReference.UsuarioListagemDTO[]> GetAllUsuariosAsync() {
             return base.Channel.GetAllUsuariosAsync();
+        }
+        
+        public DDona.Siscarpio.ConsoleTeste.UsuarioReference.UsuarioListagemDTO[] GetUsuarios(string Nome, string Username) {
+            return base.Channel.GetUsuarios(Nome, Username);
+        }
+        
+        public System.Threading.Tasks.Task<DDona.Siscarpio.ConsoleTeste.UsuarioReference.UsuarioListagemDTO[]> GetUsuariosAsync(string Nome, string Username) {
+            return base.Channel.GetUsuariosAsync(Nome, Username);
         }
         
         public bool LogUser(string Username, string Password) {

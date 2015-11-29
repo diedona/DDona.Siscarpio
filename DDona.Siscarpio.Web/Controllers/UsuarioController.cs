@@ -15,6 +15,7 @@ namespace DDona.Siscarpio.Web.Controllers
         {
             using(UsuarioClient UsuarioClient = new UsuarioClient())
             {
+                //populando os usuários que carregamos na primeira vez
                 UsuarioIndexViewModel Index = new UsuarioIndexViewModel();
                 Index.Usuarios = UsuarioClient.GetAllUsuarios();
 
@@ -30,6 +31,23 @@ namespace DDona.Siscarpio.Web.Controllers
                 Model.Usuarios = UsuarioClient.GetUsuarios(Model.DadosBusca.Nome, Model.DadosBusca.Username);
                 return View(Model);
             }
+        }
+
+        public ActionResult Criar()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Criar(CriarEditarUsuarioViewModel Model)
+        {
+            //validação padrão do ASP.NET MVC
+            if(!ModelState.IsValid)
+            {
+                return View(Model);
+            }
+
+            return View();
         }
     }
 }
