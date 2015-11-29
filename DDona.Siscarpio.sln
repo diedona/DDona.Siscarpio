@@ -15,8 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.Siscarpio.Dto", "DDon
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.Siscarpio.Wcf", "DDona.Siscarpio.Wcf\DDona.Siscarpio.Wcf.csproj", "{4CC68EE6-8710-4F92-8BF6-05E6B7E85BAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.Siscarpio.ViewModel", "DDona.Siscarpio.ViewModel\DDona.Siscarpio.ViewModel.csproj", "{196C1EE0-F0DB-4D1C-8060-47D167B6CE20}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.Siscarpio.ConsoleTeste", "DDona.Siscarpio.ConsoleTeste\DDona.Siscarpio.ConsoleTeste.csproj", "{12E9250C-F553-4C1E-91F8-58239D9AD325}"
 	ProjectSection(ProjectDependencies) = postProject
 		{4CC68EE6-8710-4F92-8BF6-05E6B7E85BAB} = {4CC68EE6-8710-4F92-8BF6-05E6B7E85BAB}
@@ -54,10 +52,6 @@ Global
 		{4CC68EE6-8710-4F92-8BF6-05E6B7E85BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CC68EE6-8710-4F92-8BF6-05E6B7E85BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CC68EE6-8710-4F92-8BF6-05E6B7E85BAB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{196C1EE0-F0DB-4D1C-8060-47D167B6CE20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{196C1EE0-F0DB-4D1C-8060-47D167B6CE20}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{196C1EE0-F0DB-4D1C-8060-47D167B6CE20}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{196C1EE0-F0DB-4D1C-8060-47D167B6CE20}.Release|Any CPU.Build.0 = Release|Any CPU
 		{12E9250C-F553-4C1E-91F8-58239D9AD325}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{12E9250C-F553-4C1E-91F8-58239D9AD325}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12E9250C-F553-4C1E-91F8-58239D9AD325}.Release|Any CPU.ActiveCfg = Release|Any CPU

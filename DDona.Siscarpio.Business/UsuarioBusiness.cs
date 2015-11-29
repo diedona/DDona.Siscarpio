@@ -55,6 +55,7 @@ namespace DDona.Siscarpio.Business
                     }
 
                     List<UsuarioListagemDTO> UsuariosDTO = Usuarios
+                        .OrderBy(x => x.Nome)
                         .Select(x => new UsuarioListagemDTO()
                         {
                             Id = x.Id,
