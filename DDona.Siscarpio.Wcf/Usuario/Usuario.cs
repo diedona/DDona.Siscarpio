@@ -29,5 +29,11 @@ namespace DDona.Siscarpio.Wcf.Usuario
             UsuarioBusiness UsuarioBusiness = new UsuarioBusiness();
             return UsuarioBusiness.LogUser(Username, Password);
         }
+
+        public bool SaveUser(string Username, string Nome, string Password)
+        {
+            UsuarioBusiness UsuarioBusiness = new UsuarioBusiness();
+            return UsuarioBusiness.Salvar(Username, Nome, Password);
+        }
     }
 }

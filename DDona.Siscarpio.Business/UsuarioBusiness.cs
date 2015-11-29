@@ -100,5 +100,33 @@ namespace DDona.Siscarpio.Business
                 throw;
             }
         }
+
+        public bool Salvar(string Username, string Nome, string Password)
+        {
+            Usuario Usuario = new Usuario()
+            {
+                Nome = Nome,
+                Password = Password,
+                Username = Username,
+                Ativo = true,
+                SenhaResetada = false
+            };
+
+            try
+            {
+                using(SiscarpioContext db = new SiscarpioContext())
+                {
+                    db.Usuarios.Add(Usuario);
+                    db.SaveChanges();
+
+                    return true;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
+        }
     }
 }

@@ -20,5 +20,8 @@ namespace DDona.Siscarpio.Wcf.Usuario
 
         [OperationContract]
         bool LogUser(string Username, string Password);
+
+        [OperationContract]
+        bool SaveUser(string Username, string Nome, string Password);
     }
 }

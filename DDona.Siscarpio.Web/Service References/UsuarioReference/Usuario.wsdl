@@ -25,6 +25,12 @@
   <wsdl:message name="IUsuario_LogUser_OutputMessage">
     <wsdl:part name="parameters" element="tns:LogUserResponse" />
   </wsdl:message>
+  <wsdl:message name="IUsuario_SaveUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUser" />
+  </wsdl:message>
+  <wsdl:message name="IUsuario_SaveUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUserResponse" />
+  </wsdl:message>
   <wsdl:portType name="IUsuario">
     <wsdl:operation name="GetAllUsuarios">
       <wsdl:input wsaw:Action="http://tempuri.org/IUsuario/GetAllUsuarios" message="tns:IUsuario_GetAllUsuarios_InputMessage" />
@@ -37,6 +43,10 @@
     <wsdl:operation name="LogUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IUsuario/LogUser" message="tns:IUsuario_LogUser_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IUsuario/LogUserResponse" message="tns:IUsuario_LogUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuario/SaveUser" message="tns:IUsuario_SaveUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuario/SaveUserResponse" message="tns:IUsuario_SaveUser_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IUsuario" type="tns:IUsuario">
@@ -61,6 +71,15 @@
     </wsdl:operation>
     <wsdl:operation name="LogUser">
       <soap:operation soapAction="http://tempuri.org/IUsuario/LogUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUser">
+      <soap:operation soapAction="http://tempuri.org/IUsuario/SaveUser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -111,6 +111,12 @@ namespace DDona.Siscarpio.Web.UsuarioReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuario/LogUser", ReplyAction="http://tempuri.org/IUsuario/LogUserResponse")]
         System.Threading.Tasks.Task<bool> LogUserAsync(string Username, string Password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuario/SaveUser", ReplyAction="http://tempuri.org/IUsuario/SaveUserResponse")]
+        bool SaveUser(string Username, string Nome, string Password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuario/SaveUser", ReplyAction="http://tempuri.org/IUsuario/SaveUserResponse")]
+        System.Threading.Tasks.Task<bool> SaveUserAsync(string Username, string Nome, string Password);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -162,6 +168,14 @@ namespace DDona.Siscarpio.Web.UsuarioReference {
         
         public System.Threading.Tasks.Task<bool> LogUserAsync(string Username, string Password) {
             return base.Channel.LogUserAsync(Username, Password);
+        }
+        
+        public bool SaveUser(string Username, string Nome, string Password) {
+            return base.Channel.SaveUser(Username, Nome, Password);
+        }
+        
+        public System.Threading.Tasks.Task<bool> SaveUserAsync(string Username, string Nome, string Password) {
+            return base.Channel.SaveUserAsync(Username, Nome, Password);
         }
     }
 }

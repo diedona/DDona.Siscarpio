@@ -47,7 +47,16 @@ namespace DDona.Siscarpio.Web.Controllers
                 return View(Model);
             }
 
-            return View();
+            //tentando salvar pelo serviço
+            using(UsuarioClient UsuarioClient = new UsuarioClient())
+            {
+                if(!UsuarioClient.SaveUser(Model.Username, Model.Nome, Model.Password))
+                {
+                    return View(Model);
+                }
+            }
+
+            return RedirectToAction("Index");
         }
     }
 }
